@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.037" timestamp="2024-04-15T18:12:07.892077" hostname="fv-az1055-430"><testcase classname="test_file" name="test_case_0" time="0.002"><failure message="AssertionError: assert '6' == '2'&#10;  &#10;  - 2&#10;  + 6">def test_case_0():
+        input_data = "4 2 "
+        expected_result = "2"
+        cast_type = type(expected_result)
+    
+        result = subprocess.run(
+            "./main",
+            input=input_data.encode(),
+            stdout=subprocess.PIPE,
+        )
+&gt;       assert cast_type(result.stdout.decode()) == expected_result
+E       AssertionError: assert '6' == '2'
+E         
+E         - 2
+E         + 6
+
+test_file.py:14: AssertionError</failure></testcase><testcase classname="test_file" name="test_case_1" time="0.001" /><testcase classname="test_file" name="test_case_2" time="0.001" /></testsuite></testsuites>
